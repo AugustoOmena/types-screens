@@ -25,7 +25,7 @@ const CalendarioNoTopo = () => {
 
     return (
         <View style={styles.container}>
-            <ImageBackground source={require('../../../assets/imagens/backgroundColor.png')} style={styles.image}>
+            <ImageBackground source={require('../../../../assets/imagens/backgroundColor.png')} style={styles.image}>
                 <Text style={styles.text}>{dayOfMonth} {monthAbbreviations[month]} {year}</Text>
                 <View style={styles.weekContainer}>
                 {daysOfWeek.map((day, index) => (
@@ -48,6 +48,7 @@ export default CalendarioNoTopo;
 
 const styles = StyleSheet.create({
     container: {
+      zIndex: 1,
       flex: 1,
       backgroundColor: '#f7f7f8',
     },
