@@ -5,6 +5,7 @@ import { useAppNavigation } from "../../utils/useAppNavigation";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 import CalendarioNoTopo from "./shared/Calendario";
+import AccordionAlarme from "./shared/AccordionAlarme";
 
 type Alarme = {
     hora: string;
@@ -47,6 +48,7 @@ const First = () => {
     };
     
     const renderItem = ({ item, index }: { item: Alarme, index: number }) => (
+        //<AccordionAlarme hora={item.hora} nome={item.nome} index={index}></AccordionAlarme>
         <View style={styles.alarmeDaLista}>
             <View>
                 <Text style={styles.hora}>{item.hora}</Text>
@@ -81,12 +83,14 @@ const First = () => {
         <View style={styles.fullScreenContainer}>
             <CalendarioNoTopo />
 
-            <FlatList
+            {/* <FlatList
                 data={alarmes}
                 renderItem={renderItem}
                 keyExtractor={(item, index) => index.toString()}
                 contentContainerStyle={styles.listContainer}
-            />
+            /> */}
+
+            <AccordionAlarme></AccordionAlarme>
 
             <View style={styles.bottomBaixo}>
                 <TouchableOpacity
