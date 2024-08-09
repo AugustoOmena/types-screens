@@ -13,15 +13,17 @@ const First = () => {
 
     const navigation = useAppNavigation();
     const [alarmes, setAlarmes] = useState<Alarme[]>([
-        { hora: '08:00 AM', nome: 'Acordar' },
-        { hora: '12:00 PM', nome: 'Almoço' },
-        { hora: '07:00 PM', nome: 'Exercício' },
+        { hora: '08:00', nome: 'Acordar' },
+        { hora: '12:00', nome: 'Almoço' },
+        { hora: '07:00', nome: 'Exercício' },
     ]);
 
     const renderItem = ({ item }: { item: Alarme }) => (
-        <View >
-            <Text >Hora: {item.hora}</Text>
-            <Text >Nome: {item.nome}</Text>
+        <View style={styles.alarmeDaLista}>
+            <View>
+                <Text style={styles.hora}>{item.hora} </Text>
+                <Text style={styles.horaDetalhes}>{item.nome}</Text>
+            </View>
         </View>
     );
 
@@ -35,7 +37,7 @@ const First = () => {
                 keyExtractor={(item, index) => index.toString()}
                 contentContainerStyle={styles.listContainer}
             />
-            
+
             <View style={styles.Bottom}>
                 <TouchableOpacity
                     onPress={() =>

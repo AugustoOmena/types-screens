@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
   listContainer: {
       paddingBottom: 525,
       paddingHorizontal: 20,
+      marginTop: 180,
   },
   container: {
     top: 170,
@@ -32,6 +33,17 @@ export const styles = StyleSheet.create({
         right: 0,
         justifyContent: 'center',
         alignItems: 'center',
+  },
+  alarmeDaLista: {
+    backgroundColor: 'white',
+    padding: 10,
+    marginBottom: 15,
+  },
+  hora: {
+    fontSize: 47,
+  },
+  horaDetalhes: {
+    fontSize: 20,
   }
   });
   
