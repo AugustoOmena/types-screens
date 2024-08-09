@@ -9,17 +9,19 @@ const First = () => {
     return (
         <View>
             <CalendarioNoTopo></CalendarioNoTopo>
-            
             <View style={styles.container}>
                 <Text>First</Text>
+
+
                 <TouchableOpacity
                     onPress={() =>
                         navigation.navigate("Onboarding", {
-                            screen: "Second"
+                            screen: "CriarAlarme"
                         })
                     }
+                    style={styles.button}
                 >
-                    <Text style={styles.button}>Go to Second</Text>
+                    <Text style={styles.buttonText}>+</Text>
                 </TouchableOpacity>
             </View>
         </View>

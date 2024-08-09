@@ -1,5 +1,5 @@
 import First from "./views/Onboarding/First";
-import Second from "./views/Onboarding/Second";
+import CriarAlarme from "./views/Onboarding/CriarAlarme/CriarAlarme";
 import { NavigatorScreenParams } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -9,7 +9,7 @@ export type RootStackParamList = {
 
 export type OnboardingStackParamList = {
     First: undefined;
-    Second: undefined;
+    CriarAlarme: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -23,7 +23,7 @@ const OnboardingNavigator = () => {
             }}
         >
             <OnboardingStack.Screen name="First" component={First} />
-            <OnboardingStack.Screen name="Second" component={Second} />
+            <OnboardingStack.Screen name="CriarAlarme" component={CriarAlarme} />
         </OnboardingStack.Navigator>
     )
 }
