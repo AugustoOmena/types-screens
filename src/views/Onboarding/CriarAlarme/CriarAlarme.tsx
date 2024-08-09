@@ -25,13 +25,17 @@ const CriarAlarme = () => {
 
     const salvarAlarme = async () => {
         try {
-            if(nome == "") {return}
-            const novoAlarme = { nome, hora: hora.toLocaleTimeString() };
+            if (nome === "") { return; }
+            
+            // Formatar hora para mostrar apenas horas e minutos
+            const horaFormatada = hora.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            
+            const novoAlarme = { nome, hora: horaFormatada };
             const alarmesExistentes: Alarme[] = JSON.parse((await AsyncStorage.getItem('alarmes')) || '[]');
             alarmesExistentes.push(novoAlarme);
             await AsyncStorage.setItem('alarmes', JSON.stringify(alarmesExistentes));
             setAlarmes(alarmesExistentes);
-            navigation.goBack()
+            navigation.goBack();
         } catch (error) {
             console.log(error);
         }
@@ -83,16 +87,13 @@ const CriarAlarme = () => {
                         }
                     }}
                 />
-            )}
+                )}
 
-            <TouchableOpacity onPress={() => setShowTimePicker(true)} style={styles.inputNomeDoAlarmeContainer}>
-                <Text style={styles.inputText}>Selecionar Hora</Text>
-            </TouchableOpacity>
-
-
+                <TouchableOpacity onPress={() => setShowTimePicker(true)} style={styles.inputNomeDoAlarmeContainer}>
+                    <Text style={styles.inputText}>Selecionar Hora</Text>
+                </TouchableOpacity>
 
             </View>
-            
 
             <View style={styles.bottomBaixo}>
                 <TouchableOpacity

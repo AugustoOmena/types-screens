@@ -3,9 +3,10 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   fullScreenContainer: {
     flex: 1,
+    backgroundColor: '#f7f7f8',
   },
   listContainer: {
-    paddingBottom: 525,
+    paddingBottom: 250,
     paddingHorizontal: 20,
     marginTop: 180,
   },
