@@ -9,7 +9,7 @@ type Alarme = {
     nome: string;
 };
 
-const AccordionAlarme = (props: any) => {
+const ListaAccordionAlarme = (props: any) => {
 
     const [alarmes, setAlarmes] = useState<Alarme[]>([]);
 
@@ -86,4 +86,4 @@ const AccordionAlarme = (props: any) => {
     );
 };
 
-export default AccordionAlarme;
+export default ListaAccordionAlarme;

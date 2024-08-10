@@ -4,7 +4,7 @@ import { styles } from "../../../styles";
 import { useAppNavigation } from "../../utils/useAppNavigation";
 
 import CalendarioNoTopo from "./shared/Calendario";
-import AccordionAlarme from "./shared/AccordionAlarme";
+import ListaAccordionAlarme from "./shared/ListaAccordionAlarme";
 
 
 const First = () => {
@@ -15,7 +15,7 @@ const First = () => {
         <View style={styles.fullScreenContainer}>
             <CalendarioNoTopo />
 
-            <AccordionAlarme />
+            <ListaAccordionAlarme />
 
             <View style={styles.bottomBaixo}>
                 <TouchableOpacity
