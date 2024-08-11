@@ -42,14 +42,14 @@ const CriarAlarme = () => {
     };
 
     return (
-        <View style={styles.container}>
-            <ImageBackground source={require('../../../../assets/imagens/backgroundColor.png')} style={styles.image}>
+        <View style={styles.containerCriarAlarme}>
+            <ImageBackground source={require('../../../../assets/imagens/backgroundColor.png')} style={styles.imagemDeFundoNoTopo}>
                     <TouchableOpacity
                             onPress={() =>
                                 navigation.goBack()
                             }
                         >
-                        <View style={styles.voltarContainer}>
+                        <View style={styles.containerVoltarAnterior}>
                             <Image source={require('../../../../assets/imagens/seta-esquerda.png')} style={styles.imagemVoltar} />
                             <Text style={styles.textoVoltar}>Voltar</Text>
                         </View>
@@ -90,7 +90,7 @@ const CriarAlarme = () => {
                 )}
 
                 <TouchableOpacity onPress={() => setShowTimePicker(true)} style={styles.inputNomeDoAlarmeContainer}>
-                    <Text style={styles.inputText}>Selecionar Hora</Text>
+                    <Text style={styles.inputText}>Selecionar Hora    {hora.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Text>
                 </TouchableOpacity>
 
             </View>

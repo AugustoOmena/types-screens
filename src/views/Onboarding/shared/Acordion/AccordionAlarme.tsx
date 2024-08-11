@@ -1,6 +1,7 @@
 import { Text, TouchableOpacity, View, FlatList, Alert, Image } from "react-native";
 import React, { useState, useEffect } from "react";
-import { styles } from "../../../../styles";
+import { stylesAcordeon } from "./style-accordion";
+import { styles } from "../../../styles";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -45,10 +46,10 @@ const AccordionAlarme = (props: any) => {
     };
     
     const renderItem = ({ item, index }: { item: Alarme, index: number }) => (
-        <View style={styles.alarmeDaLista}>
+        <View style={stylesAcordeon.alarmeDaLista}>
             <View>
-                <Text style={styles.hora}>{item.hora}</Text>
-                <Text style={styles.horaDetalhes}>{item.nome}</Text>
+                <Text style={styles.fonte47}>{item.hora}</Text>
+                <Text style={styles.fonte20}>{item.nome}</Text>
                 <TouchableOpacity
                     onPress={() => {
                         Alert.alert(
@@ -77,12 +78,17 @@ const AccordionAlarme = (props: any) => {
 
 
     return (  
+        <View style={stylesAcordeon.listContainer}>
+            {/* <Text style={styles.espacoTop80}>Alarmes</Text> */}
+            
             <FlatList
                 data={alarmes}
                 renderItem={renderItem}
                 keyExtractor={(item, index) => index.toString()}
-                contentContainerStyle={styles.listContainer}
+                
             />
+        </View>
+            
     );
 };
 

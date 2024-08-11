@@ -1,10 +1,10 @@
 import { Text, TouchableOpacity, View, Image } from "react-native";
 import React from "react";
-import { styles } from "../../../styles";
+import { styles } from "../styles";
 import { useAppNavigation } from "../../utils/useAppNavigation";
 
 import CalendarioNoTopo from "./shared/Calendario";
-import AccordionAlarme from "./shared/AccordionAlarme";
+import AccordionAlarme from "./shared/Acordion/AccordionAlarme";
 
 
 const First = () => {
@@ -27,7 +27,6 @@ const First = () => {
                     style={styles.button}
                 >
                     <Image source={require('../../../assets/imagens/adicionar-alarme.png')} style={styles.imagemAlarme}></Image>
-                   
                 </TouchableOpacity>
             </View>
         </View>

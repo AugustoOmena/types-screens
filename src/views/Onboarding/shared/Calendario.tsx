@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
       zIndex: 1,
       flex: 1,
       backgroundColor: '#f7f7f8',
+      marginBottom: 10,
     },
     image: {
       width: '100%',
