@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity, View, Image } from "react-native";
 import React from "react";
-import { styles } from "../../../styles";
+import { styles } from "../../styles";
 import { useAppNavigation } from "../../utils/useAppNavigation";
 
 import CalendarioNoTopo from "./shared/Calendario";

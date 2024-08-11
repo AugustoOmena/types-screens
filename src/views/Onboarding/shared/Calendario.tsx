@@ -24,6 +24,7 @@ const CalendarioNoTopo = () => {
     };
 
     return (
+      <View>
         <View style={styles.container}>
             <ImageBackground source={require('../../../../assets/imagens/backgroundColor.png')} style={styles.image}>
                 <Text style={styles.text}>{dayOfMonth} {monthAbbreviations[month]} {year}</Text>
@@ -40,7 +41,11 @@ const CalendarioNoTopo = () => {
                 ))}
                 </View>
             </ImageBackground>
+            
         </View>
+        <Text style={[styles.fonte30, styles.paddingEsq20]}>Alarmes</Text>
+      </View>
+        
     )
 };
 
@@ -48,9 +53,10 @@ export default CalendarioNoTopo;
 
 const styles = StyleSheet.create({
     container: {
-      zIndex: 1,
+      zIndex: -1,
       flex: 1,
       backgroundColor: '#f7f7f8',
+      marginBottom: 170,
     },
     image: {
       width: '100%',
@@ -91,7 +97,7 @@ const styles = StyleSheet.create({
       fontSize: 12,
     },
     todayContainer: {
-      backgroundColor: 'orange',
+      backgroundColor: '#ff9100',
     },
     todayDate: {
       color: 'white',
@@ -112,4 +118,10 @@ const styles = StyleSheet.create({
     space20pixels: {
       padding: 20,
     },
+    fonte30: {
+      fontSize: 30,
+    },
+    paddingEsq20: {
+      paddingLeft: 20
+    }
   });

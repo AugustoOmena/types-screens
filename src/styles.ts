@@ -6,9 +6,10 @@ export const styles = StyleSheet.create({
     backgroundColor: '#f7f7f8',
   },
   listContainer: {
-    paddingBottom: 250,
+    minHeight: '100%',
+    paddingTop: 10,
+    paddingBottom: 300,
     paddingHorizontal: 20,
-    marginTop: 180,
   },
   container: {
     top: 170,
@@ -24,7 +25,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: 'orange',
+    backgroundColor: '#ff9100',
     borderRadius: 47,
     width: 80,
     height: 80,
@@ -51,6 +52,6 @@ export const styles = StyleSheet.create({
   },
   horaDetalhes: {
     fontSize: 20,
-  }
+  },
   });
   

@@ -1,16 +1,17 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    container: {
-        height: '100%',
+    containerCriarAlarme: {
+        display: 'flex',
+        minHeight: '100%',
         alignItems: "center",
       },
-    image: {
+    imagemDeFundoNoTopo: {
         width: '100%',
         height: 150,
         paddingTop: 80,
       },
-      voltarContainer: {
+      containerVoltarAnterior: {
         marginLeft: 6,
         flexDirection: 'row',
         alignItems: 'center',
@@ -41,8 +42,8 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
     },
     inputNomeDoAlarmeContainer : {
-     
       backgroundColor: 'white',
+      minWidth: '92%',
       padding: 15,
       margin: 10,
       borderRadius: 7,

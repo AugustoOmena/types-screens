@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity, View, FlatList, Alert, Image } from "react-native";
 import React, { useState, useEffect } from "react";
-import { styles } from "../../../../styles";
+import { styles } from "../../../styles";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -77,12 +77,15 @@ const ListaAccordionAlarme = (props: any) => {
 
 
     return (  
+        <View>
             <FlatList
                 data={alarmes}
                 renderItem={renderItem}
                 keyExtractor={(item, index) => index.toString()}
                 contentContainerStyle={styles.listContainer}
             />
+        </View>
+           
     );
 };
 
