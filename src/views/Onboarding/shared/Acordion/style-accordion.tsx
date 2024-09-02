@@ -10,7 +10,8 @@ alarmeDaLista: {
   },
   listContainer: {
     minHeight: '100%',
-    paddingBottom: 250,
-    marginTop: 10,
+    paddingBottom: 420,
+    marginTop: 160,
+    marginHorizontal: 15,
   },
 });

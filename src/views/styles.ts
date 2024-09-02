@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
   },
   bottomBaixo: {
     position: 'absolute',
-    bottom: 20,
+    bottom: 180,
     left: 0,
     right: 0,
     justifyContent: 'center',
